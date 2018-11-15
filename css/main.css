@@ -1,0 +1,76 @@
+:root {
+  --main-fade-time: 1s;
+}
+
+body{
+  background-color: black;
+  color: red;
+  text-align: center;
+}
+
+button{
+  outline: none;
+  width: 13vmin; /*100/7 = 14.28 */
+  height: 7vmin; /*100/13 = 7.69*/
+  background-color: black;
+  font-size: 5vmin;
+  border: none;
+  opacity: 0;
+}
+
+.hov:hover{
+  transition: transform .1s;
+  transform: scale(1.15);
+}
+
+.fade_out{
+  animation-name: fade_out;
+  animation-duration: var(--main-fade-time);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_out{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    color: black;
+  }
+}
+
+.fade_in{
+  animation-name: fade_in;
+  animation-duration: var(--main-fade-time);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_in{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 13vmin;
+  background-color: black;
+  color: white;
+  text-align: center;
+  bottom: 0.5vmin;
+  left: 0.5vmin;
+  position: inherit; /*absolute;*/
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}  
