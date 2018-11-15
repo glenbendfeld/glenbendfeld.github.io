@@ -21,7 +21,7 @@ var tool_tip_font_size = "1.5vmin";
 
 var instructions_1 = "Sort the prime factors below ";
 var instructions_2 = "to match the non-prime products above ";
-var instructions_3 = "so that a bingo line is formed.";
+var instructions_3 = "so that a line is formed.";
 var reading_time = 1000; // used in demo_button_clicked() in onclick_functions.js
 var running_anim_time = 0; // used in demo.js
 var anim_interval = 400;
